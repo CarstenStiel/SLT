@@ -1,0 +1,32 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+
+\title{Statistical Learning Theory\\Exercise Sheet 1}
+\author{Group 9 - Herzog, Redlich, Kriewald}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Discussion: II(c)}
+
+Within the training range $[1,5]$, the four networks have similar errors.
+They are slightly less accurate than $h_3$ at $L=1,2$, but more accurate at
+$L=4,5$. At $L=3$, the differences from $h_3$ are small. A larger network
+therefore does not consistently improve performance within this range.
+
+For larger endpoints, the network errors increase sharply. At $L=6$, all
+four networks have larger errors than $h_2$ and $h_3$. At $L=8$, they are
+worse than all three comparison rules. Their MSE at $L=8$ ranges from about
+$3.8$ to $5.9$, compared with $0.52$ for $h_3$. The learned relationship
+therefore does not extend reliably to these larger endpoints.
+
+At $L=0.5$, performance depends strongly on the architecture. The smallest
+network has an MSE of about $0.004$, whereas the deepest has about $0.18$.
+Poor performance outside the training range is thus not uniform across
+architectures. Unlike the networks, $h_1,h_2,h_3$ are not fitted to the
+training interval. Of these three rules, $h_3$ is the most accurate at
+every tested endpoint.
+
+\end{document}
